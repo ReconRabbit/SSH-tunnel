@@ -14,6 +14,27 @@ to securely access a remote web service that is otherwise unreachable.
 
 ---
 
+## 1️⃣ Host System Requirements
+- **Operating System**:  
+  - Linux (Kali, Ubuntu, Debian, Fedora, Arch)  
+  - macOS  
+  - Windows (with WSL2 or Docker Desktop)
+- **Privileges**:  
+  - User must be able to run `docker` and `docker compose` commands  
+  - Ability to create and remove containers/networks.
+
+---
+
+## 2️⃣ Installed Software Requirements
+| Tool | Version | Purpose |
+|------|--------|---------|
+| **Docker Engine** | ≥ 20.x | Runs the Germany, Russia, and Router containers |
+| **Docker Compose** | ≥ 2.x | Orchestrates the multi-container environment |
+| **OpenSSH Client** | Standard | Provides the `ssh` binary for key generation and tunneling |
+| **curl** (optional) | Latest | Quick HTTP testing of the forwarded web service |
+
+---
+
 ## 🗂️ Lab Structure
 
 | Component      | Role                           | Example Address      | Notes                                   |
