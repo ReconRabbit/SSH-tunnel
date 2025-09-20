@@ -24,8 +24,9 @@ to securely access a remote web service that is otherwise unreachable.
 
 ---
 
-## ⚙️ Setup
+## ⚙️ Setup 
 
+MAKE SURE YOU ARE IN THE "tunnel" DIRECTORY BEFORE CONTINUING
 1. **Generate SSH Keys**
    ```bash
    ./keygen.sh
