@@ -30,4 +30,5 @@ to securely access a remote web service that is otherwise unreachable.
    ```bash
    ./keygen.sh
 2. **Start Docker Containers**
-   ```docker compose up -d --build
+   ```bash
+   docker compose up -d --build
