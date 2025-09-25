@@ -52,8 +52,15 @@ MAKE SURE YOU ARE IN THE "tunnel" DIRECTORY BEFORE CONTINUING
    ```bash
    chmod +x ./keygen.sh
    chmod +x ./cleanup_tunnel.sh
+   chmod +x ./ip-route-del.sh
    ./keygen.sh
 2. **Start Docker Containers**
    ```bash
    docker compose up -d --build
+3. **Remove ability to talk directly to Russian host**
+   ```bash
+   ./ip-route-del.sh
+4. **Clean up docker, tunnel, ip tables**
+   ```bash
+   ./cleanup_tunnel.sh
 
