@@ -50,7 +50,10 @@ to securely access a remote web service that is otherwise unreachable.
 MAKE SURE YOU ARE IN THE "tunnel" DIRECTORY BEFORE CONTINUING
 1. **Generate SSH Keys**
    ```bash
+   chmod +x ./keygen.sh
+   chmod +x ./cleanup_tunnel.sh
    ./keygen.sh
 2. **Start Docker Containers**
    ```bash
    docker compose up -d --build
+
