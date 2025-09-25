@@ -1,0 +1,15 @@
+**What the SSH command does**
+ssh -L 8080:200.53.76.61:8080 root@10.10.10.10 -p 2222
+
+
+Breaking it down:
+
+Part	Explanation
+-L 8080:200.53.76.61:8080	Forward local port 8080 on Kali → Russia container port 8080 (via SSH).
+root@10.10.10.10 -p 2222	Connects to Germany container, which is reachable from host.
+
+Your host now thinks the service is on localhost:8080.
+
+SSH forwards packets through Germany, so they reach Russia.
+
+Because Germany is attached to russia_net, it can reach Russia normally.
