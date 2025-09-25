@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-PREFIX="tunnel8"
+PREFIX="tunnel"
 
 # Find containers whose IMAGE starts with the prefix
 CONTAINERS=$(docker ps -a --format '{{.ID}} {{.Image}}' \
