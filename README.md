@@ -48,7 +48,7 @@ to securely access a remote web service that is otherwise unreachable.
 ## ⚙️ Setup 
 
 MAKE SURE YOU ARE IN THE "tunnel" DIRECTORY BEFORE CONTINUING
-1. **Generate SSH Keys**
+1. **Generate SSH Keys And Permit Execution of Scripts**
    ```bash
    chmod +x ./keygen.sh
    chmod +x ./cleanup_tunnel.sh
@@ -57,7 +57,7 @@ MAKE SURE YOU ARE IN THE "tunnel" DIRECTORY BEFORE CONTINUING
 2. **Start Docker Containers**
    ```bash
    docker compose up -d --build
-3. **Remove ability to talk directly to Russian host**
+3. **Remove Ability To Talk Directly To Russian Host**
    ```bash
    ./ip-route-del.sh
 4. **Clean up docker, tunnel, ip tables**
