@@ -13,7 +13,7 @@ RUN chmod 600 /root/.ssh/authorized_keys && \
     chown root:root /root/.ssh/authorized_keys
 
 # Add Russia private key so Germany can SSH to Russia
-COPY ../keys/id_rsa_russia /root/.ssh/id_rsa_russia
+COPY /keys/id_rsa_russia /root/.ssh/id_rsa_russia
 RUN chmod 600 /root/.ssh/id_rsa_russia && chown root:root /root/.ssh/id_rsa_russia
 
 EXPOSE 22
