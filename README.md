@@ -7,7 +7,7 @@ to securely access a remote web service that is otherwise unreachable.
 
 ## 🎯 Objective
 
-- **Stage 1:** Connect to the **Germany jump host** (`root@10.10.10.10`) using an SSH key.
+- **Stage 1:** Connect to the **Germany jump host** (`root@10.10.10.10:22`) using an SSH key.
 - **Stage 2:** From Germany, connect to the **Russia host** (`root@200.53.76.61:22`).
 - **Stage 3:** Access the **web service running on the Russian host (port 8080)**  
   directly from your local machine by setting up an SSH **port forward**.
@@ -50,9 +50,7 @@ to securely access a remote web service that is otherwise unreachable.
 MAKE SURE YOU ARE IN THE "tunnel" DIRECTORY BEFORE CONTINUING
 1. **Generate SSH Keys And Permit Execution of Scripts**
    ```bash
-   chmod +x ./keygen.sh
-   chmod +x ./cleanup_tunnel.sh
-   chmod +x ./ip-route-del.sh
+   chmod +x *.sh
    ./keygen.sh
 2. **Start Docker Containers**
    ```bash
