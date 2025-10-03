@@ -48,13 +48,13 @@ to securely access a remote web service that is otherwise unreachable.
 ## ⚙️ Setup 
 
 MAKE SURE YOU ARE IN THE "tunnel" DIRECTORY BEFORE CONTINUING
-1. **Generate SSH Keys And Permit Execution of Scripts**
+1. **Permit Execution of Scripts**
    ```bash
    chmod +x *.sh
-   ./keygen.sh
-2. **Start Docker Containers**
+2. **Start Docker Containers and generate keys**
    ```bash
    docker compose up -d --build
+   ./keygen.sh
 3. **Remove Ability To Talk Directly To Russian Host**
    ```bash
    ./ip-route-del.sh
