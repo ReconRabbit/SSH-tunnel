@@ -43,4 +43,4 @@ echo
 echo "✅ authorized_keys installed in container '$CONTAINER_NAME'"
 echo
 echo "➡ SSH into Germany container:"
-echo "    ssh -i $SSH_KEY_PATH root@localhost -p 2222"
+echo "    ssh -i $SSH_KEY_PATH root@<Germany IP> -p 22"
