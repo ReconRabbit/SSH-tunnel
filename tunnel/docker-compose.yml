@@ -1,0 +1,46 @@
+services:
+  germany_jump:
+    build: ./germany
+    container_name: germany_jump
+    hostname: germany
+    networks:
+      germany_net:
+        ipv4_address: 10.10.10.10
+      russia_net:
+        ipv4_address: 200.53.76.99
+    ports:
+      - "2222:22"   # Germany exposed to Kali host
+    depends_on:
+      - router
+  russia_jump:
+    build: ./russia
+    container_name: russia_jump
+    hostname: russia
+    networks:
+      russia_net:
+        ipv4_address: 200.53.76.61
+    # 🚫 No ports exposed → hidden from Kali
+    depends_on:
+      - router
+
+  router:
+    build: ./router
+    container_name: router
+    hostname: router
+    networks:
+      germany_net:
+        ipv4_address: 10.10.10.254
+      russia_net:
+        ipv4_address: 200.53.76.254
+    # Optional: no ports → acts only as backend
+
+networks:
+  germany_net:
+    ipam:
+      config:
+        - subnet: 10.10.10.0/24
+  russia_net:
+    internal: true   # Key: prevents host access
+    ipam:
+      config:
+        - subnet: 200.53.76.0/24
