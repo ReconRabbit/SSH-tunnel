@@ -12,6 +12,10 @@ RUN mkdir -p /var/run/sshd /root/.ssh
 #RUN chmod 600 /root/.ssh/authorized_keys && \
 #    chown root:root /root/.ssh/authorized_keys
 
+# Add a user and give provide a password
+RUN useradd -m germany
+RUN echo "germany:blitz" | chpasswd
+
 # Add Russia private key so Germany can SSH to Russia
 COPY /keys/id_rsa_russia /root/.ssh/id_rsa_russia
 RUN chmod 600 /root/.ssh/id_rsa_russia && chown root:root /root/.ssh/id_rsa_russia
