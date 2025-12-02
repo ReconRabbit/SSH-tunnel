@@ -8,6 +8,10 @@ RUN apt-get update && \
 
 RUN mkdir -p /var/run/sshd /root/.ssh
 
+# Add a user and a password
+RUN useradd -m russia
+RUN echo "russia:rasputin" | chpasswd
+
 # Website
 WORKDIR /var/www/html
 COPY website/index.html /var/www/html/index.html
