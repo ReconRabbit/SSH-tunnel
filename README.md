@@ -7,8 +7,8 @@ to securely access a remote web service that is otherwise unreachable.
 
 ## 🎯 Objective
 
-- **Stage 1:** Connect to the **Germany jump host** (`root@10.10.10.10:22`) using an SSH key or their password
-- **Stage 2:** From Germany, connect to the **Russia host** (`root@200.53.76.61:22`) using an SSH key (located on Germany jump host /root/.ssh/) or their password
+- **Stage 1:** Connect to the **Germany jump host** (`root/germany@10.10.10.10:22`) For username 'root' - use the SSH key. For username 'germany' - use the password of 'blitz'
+- **Stage 2:** From Germany, connect to the **Russia host** (`root/russia@200.53.76.61:22`) For username 'root' - use the SSH key. For username 'russia' - use the password of 'rasputin'
 - **Stage 3:** Access the **web service running on the Russian host (port 8080)**  
   directly from your local machine by setting up an SSH **port forward**.
 
@@ -44,6 +44,15 @@ to securely access a remote web service that is otherwise unreachable.
 | **Your Box**   | Local workstation (Kali, etc.)  | `localhost`          | Origin of all connections.             |
 
 ---
+
+## Usernames and passwords
+Germany Host 
+  root : SSH key
+  germany : blitz
+
+Russia Host
+  root : SSH key
+  russia : rasputin
 
 ## ⚙️ Setup 
 
