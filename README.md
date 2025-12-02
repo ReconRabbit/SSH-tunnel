@@ -48,13 +48,13 @@ to securely access a remote web service that is otherwise unreachable.
 ## Usernames and passwords
 ## Germany Host
 
-root : SSH key
+root : utilize SSH key
 
 germany : blitz
 
 ## Russia Host
 
-root : SSH key
+root : utilize SSH key
 
 russia : rasputin
 
